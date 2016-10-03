@@ -20,7 +20,7 @@ def joint( parent, child, **kwargs ):
 
 def test_regex_search( pattern, sample ):
     regex = re.compile( pattern )
-    return( regex.search( sample ) )
+    return( regex.search( str( sample ) ) )
 
 def test_regex( pattern, replace, sample ):
-    return re.sub( pattern, replace, sample)
+    return re.sub( pattern, replace, str( sample ) )
