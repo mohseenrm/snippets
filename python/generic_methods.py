@@ -1,6 +1,6 @@
 __author__ = 'MoMo'
 import re
-
+from decorators import safe_failure
 def joint( parent, child, **kwargs ):
     '''
     Returns string with child appended to parent, since string are immutable objects in Python
@@ -18,9 +18,11 @@ def joint( parent, child, **kwargs ):
 
     return( "".join( ( parent, child ) ) )
 
+@safe_failure()
 def test_regex_search( pattern, sample ):
     regex = re.compile( pattern )
     return( regex.search( str( sample ) ) )
 
+@safe_failure()
 def test_regex( pattern, replace, sample ):
     return re.sub( pattern, replace, str( sample ) )
