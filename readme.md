@@ -1,7 +1,7 @@
-#Group of snippets that can be reused
+# Group of snippets that can be reused
 > Mohseen
 
-###Contents
+### Contents
 1. Python
 2. JavaScript
 3. Regex
